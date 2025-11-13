@@ -22,6 +22,7 @@
     <p><%= m.rating %> </p>
     <% bookmark = @list.bookmarks.find_by(movie: m) %>
     <% if bookmark.present? %>
+    <p><em>--<%= bookmark.comment %></em> </p>
     <%= link_to list_bookmark_path(@list, bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
     <i class="fa-solid fa-trash"></i>
     <% end %>
