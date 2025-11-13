@@ -1,0 +1,23 @@
+.banner {
+  background-size: cover;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path("movie.jpg") %>');
+  background-position: center;
+  padding: 175px 0;
+    h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  }
+    p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+}
+.center-nav {
+  margin: 0px 58px 0px 58px;
+}

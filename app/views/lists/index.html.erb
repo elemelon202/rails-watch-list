@@ -1,0 +1,27 @@
+<div class="container mb-3">
+  <div class="container bg-dark mb-3">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path("movie.jpg") %>');">
+    <div class="container">
+      <h1>Your movie catalogue, organized your way</h1>
+      <p>Keep things simple</p>
+      <a class="btn btn-flat" href="#">Apply now</a>
+    </div>
+  </div>
+  </div>
+  <div class="center-nav d-flex">
+    <div class=" container header display-6" >My Movie Lists</div>
+    <%= link_to "Create a list +", new_list_path, class: "btn btn-success me-3" %>
+  </div>
+  <div class="container">
+    <div class="cards">
+      <% @lists.each do |l| %>
+      <%= link_to list_path(l), class: "text-decoration-none" do %>
+      <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= l.name %>
+      </div>
+      <% end %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container bg-light card mt-3 p-4" style="max-width: 400px;">
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs d-flex flex-column gap-3">
+      <%= f.input :comment, input_html: { class: "form-control" } %>
+      <%= f.association :movie, include_blank: "Select a movie", input_html: { class: "form-select" } %>
+    </div>
+
+    <div class="form-actions mt-3 d-flex justify-content-center">
+      <%= f.button :submit, "Add Movie", class: "btn btn-primary w-100" %>
+    </div>
+  <% end %>
+</div>
