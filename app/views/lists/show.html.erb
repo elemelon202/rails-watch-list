@@ -18,7 +18,7 @@
   <%= image_tag m.poster_url, alt: "text" %>
   <div class="card-product-infos">
     <h2><%= m.title %></h2>
-    <p><%= m.overview %> </p>
+    <p><%= m.overview[0..100]... %> </p>
     <p><%= m.rating %> </p>
     <% bookmark = @list.bookmarks.find_by(movie: m) %>
     <% if bookmark.present? %>
