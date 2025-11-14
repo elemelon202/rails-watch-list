@@ -16,7 +16,7 @@
     <div class="cards">
       <% @lists.each do |l| %>
       <%= link_to list_path(l), class: "text-decoration-none" do %>
-      <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= l.photo.attached? ? cl_image_path(l.photo.key) : image_path('https://ducunl0s4svtl.cloudfront.net/wp-content/uploads/2017/10/flat-clapperboard-icon_1063-38.jpg') %>)">
         <%= l.name %>
       </div>
       <% end %>
